@@ -14,7 +14,6 @@ byte data[ 10 ] = { B00111111 ,                       //利用陣列將七段顯
 
 void setup() 
  {
-  Serial.begin(9600);
   pinMode (trig, OUTPUT);
   pinMode (echo, INPUT);
   DDRD = B11111111;
@@ -53,5 +52,5 @@ else
 {
   i = 5;
 }
-PORTD = ~ data[ i ];
+PORTD = data[ i ];
 }
